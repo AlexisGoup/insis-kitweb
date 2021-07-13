@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h5 class="modal-title">Supprimer un service</h5>
+</div>
+
+<div class="modal-body">
+    <p>Desirez-vous supprimer le service suivant ? </p>
+    <p><strong>{{ service?.nom }}</strong></p>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)='close()'>Valider</button>
+    <button type="button" class="btn btn-danger" (click)='close()'>Annuler</button>
+</div>

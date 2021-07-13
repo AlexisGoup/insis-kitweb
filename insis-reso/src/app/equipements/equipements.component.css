@@ -1,0 +1,13 @@
+.scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.bordered {
+    border: thin solid grey;
+}
+
+.hovered:hover {
+    background-color: lightgray;
+}

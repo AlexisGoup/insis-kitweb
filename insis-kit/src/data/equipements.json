@@ -1,0 +1,51 @@
+[
+    {
+        "id" : 0,
+        "nom" : "Microscope confocal Phasevision PS 34",
+        "nom2": "",
+        "marque": "Phasevision",
+        "modele": "PS 34",
+        "localisation": "Salle 2",
+        "contact": "John Doe",
+        "champ0" : "confocal",
+        "champ1" : "1 ym",
+        "champ2" : "0.5 ym",
+        "img" : "https://lims.femto-st.fr/resources.femto/Tools/TTC7_20190710_114923.jpg",
+        "description" : "Multi-functionnal high precision inspection system Larger field of view for faster inspection (Macro). Highest resolution from every angle (Oblique Illumination + Visible or UV Light)",
+        "reseau" : 1,
+        "plateforme" : 4
+    },
+    {
+        "id" : 1,
+        "nom" : "Microscope confocal MICRODEVICE XXD-AF",
+        "nom2": "",
+        "marque": "MICRODEVICE",
+        "modele": "XXD-AF",
+        "localisation": "Salle 2",
+        "contact": "John Doe",
+        "champ0" : "confocal",
+        "champ1" : "2 ym",
+        "champ2" : "1 ym",
+        "img" : "https://www.loisirsplaisirs.com/5855-large_default/microscope-optique-bk6000-trinoculaire.jpg",
+        "description" : "Multi-functionnal high precision inspection system Larger field of view for faster inspection (Macro). Highest resolution from every angle (Oblique Illumination + Visible or UV Light)",
+        "reseau" : 1,
+        "plateforme" : 4
+    },
+    {
+        "id" : 2,
+        "nom" : "Microscope confocal MASTER IMAGING CP-17",
+        "nom2": "",
+        "marque": "MASTER IMAGING",
+        "modele": "CP-17",
+        "localisation": "Salle 6",
+        "contact": "John Doe",
+        "champ0" : "confocal",
+        "champ1" : "2 ym",
+        "champ2" : "1 ym",
+        "option" : "mesure de fluorescence",
+        "img" : "https://static.eproshopping.fr/media/eb38df6bb746ad8ebeea4cd122b53cac61610c51/produit/be05fc9b794d4b4985413b464aa4f9631d257817.jpg",
+        "description" : "Multi-functionnal high precision inspection system Larger field of view for faster inspection (Macro). Highest resolution from every angle (Oblique Illumination + Visible or UV Light)",
+        "reseau" : 1,
+        "plateforme" : 4
+    }
+]

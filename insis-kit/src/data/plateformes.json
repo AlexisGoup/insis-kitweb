@@ -1,0 +1,48 @@
+[
+    {
+        "id" : 0,
+        "nom" : "Centrale de Nantes",
+        "nom2": "",
+        "localisation": "",
+        "img" : "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c0/Logo_ECN.svg/1200px-Logo_ECN.svg.png",
+        "description" : "",
+        "reseau" : 0
+    },
+    {
+        "id" : 1,
+        "nom" : "Insitut de Toulouse",
+        "nom2": "",
+        "localisation": "",
+        "img" : "https://www.oteis.fr/wp-content/uploads/2016/04/6-2-1.png",
+        "description" : "",
+        "reseau" : 0
+    }
+    ,
+    {
+        "id" : 2,
+        "nom" : "Contraero",
+        "nom2": "",
+        "localisation": "",
+        "img" : "https://www.onera.fr/sites/default/files/actualites/2017-09/ONERA-01774_BD.jpg",
+        "description" : "",
+        "reseau" : 0
+    },
+    {
+        "id" : 3,
+        "nom" : "MEOL",
+        "nom2": "",
+        "localisation": "",
+        "img" : "https://lmfl.cnrs.fr/wp-content/themes/cnrswebkit/assets/img/kitweb.png",
+        "description" : "",
+        "reseau" : 0
+    },
+    {
+        "id" : 4,
+        "nom" : "Plateforme Paris",
+        "nom2": "",
+        "localisation": "",
+        "img" : "https://www.oteis.fr/wp-content/uploads/2016/04/6-2-1.png",
+        "description" : "",
+        "reseau" : 1
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "http://162.38.134.135/db" : {
+        "target" : "http://localhost/3000/users",
+        "secure" : false,
+        "logLevel" : "debug",
+        "changeOrigin" : true,
+        "pathRewrite" : {
+            "^/db" : ""
+        }
+    }
+}

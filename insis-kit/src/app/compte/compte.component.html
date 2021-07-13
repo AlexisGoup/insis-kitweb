@@ -1,0 +1,35 @@
+<section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <div style="margin-bottom: 50px;">
+        <h2>Mon Compte</h2>
+    </div>
+
+  
+    <h3 style="margin-bottom: 30px; margin-left: 5%; margin-top: 5%;">Mes Informations de connexion</h3>
+    <form style="margin-left: 5%;" action="">
+        <div style="padding: 10px; background-color: lightgray; border-radius: 4px;">
+            <p><strong>Email :</strong></p>
+            <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ user?.email }}" style="width: 30%; margin-bottom: 30px;">
+            
+            <p><strong>Mot de passe :</strong></p>
+            <input ngModel name ='password' type="text" class="form-control" id="InputPassword" value="{{ user?.password }}" style="width: 30%; margin-bottom: 30px;">
+        </div>       
+
+        <h3 style="margin-bottom: 30px; margin-top: 60px;">Informations generales</h3>
+        <div style="padding: 10px; background-color: lightgray; border-radius: 4px;">
+            <p><strong>Nom :</strong></p>
+            <input ngModel name ='nom' type="text" class="form-control" id="InputNom" value="{{ user?.nom }}" style="width: 30%; margin-bottom: 30px;">
+
+            <p><strong>Prenom:</strong></p>
+            <input ngModel name ='prenom' type="text" class="form-control" id="InputPrenom" value="{{ user?.prenom }}" style="width: 30%; margin-bottom: 30px;">
+
+            <p><strong>Type d'utilisateur :</strong></p>
+            <input ngModel name ='type' type="text" class="form-control" id="InputType" value="{{ user?.type.toUpperCase() }}" style="width: 30%; margin-bottom: 30px;">
+        </div>
+        
+
+        <div class="d-flex justify-content-end">
+            <a type="button" class="btn btn-secondary" [routerLink]="['home']" style="margin-top: 40px; margin-right: 20px;">Retour a l'acceuil</a>
+            <a (click)='saved()' type="button" class="btn btn-secondary" style="margin-top: 40px;">Sauvegarder les informations</a>
+        </div> 
+    </form>
+</section>

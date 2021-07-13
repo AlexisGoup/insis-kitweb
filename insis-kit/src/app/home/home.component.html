@@ -1,0 +1,26 @@
+<section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <div style="margin-bottom: 50px;">
+        <h2>Accueil</h2>
+    </div>
+
+    <h3>Liste des reseaux de plateformes</h3>
+    <div class="d-flex">  
+        <div *ngFor="let reseau of reseaux" 
+            class="d-flex flex-column" 
+            style="background-color: lightgray; width: 300px; margin: 30px; padding: 15px;">
+
+            <p>{{ reseau.nom }}</p>
+            <div>
+                <img src="{{ reseau.img }}" alt="image descriptive du reseau" style="width: 250px;">
+            </div>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-reseau', reseau.id]" style="margin-top: 15px;">Editer le contenu du site</a>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/plateformes', reseau.id]" style="margin-top: 15px;">Editer les PF / EQT du reseau</a>
+        </div>
+
+        <div class="d-flex flex-column"
+            style="background-color: lightgray; width: 300px; margin: 30px; padding: 15px;">
+            <p>Ajouter un nouveau reseau</p>
+            <i (click)="createNew()" class="fa fa-plus fa-5x" aria-hidden="true" style="font-size: 150px; margin-left: 70px; margin-top: 40px; cursor: pointer;"></i>
+        </div>
+    </div>
+</section>

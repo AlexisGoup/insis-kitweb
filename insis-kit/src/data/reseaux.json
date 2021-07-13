@@ -1,0 +1,45 @@
+[
+    {
+        "id" : 0,
+        "nom" : "Souffleries Aero Hydro",
+        "nom2": "",
+        "localisation": "",
+        "img" : "https://blog.wika.fr/files/2019/03/monitoring-turbines-in-power-plants_copyright-shutterstock_resized.jpg",
+        "description" : "Ce laboratoire s'est récemment distingué à l'international grâce à l’invention d’une soufflerie aérodynamique innovante à base de 'pixels' de vent, utile en particulier pour le test, le développement et la certification de drones. Cette soufflerie est également opérationnelle pour tout autre essai nécessitant des conditions non réalisables dans un soufflerie conventionnelle (météo, rafales, cisaillements, vents inclinés, etc.). L’invention a donné naissance à une startup d'HEPIA, WindShape.",
+        "plateformes" : {
+            "0" : 0,
+            "1" : 1,
+            "2" : 2,
+            "3" : 3
+        },
+        "titre1" : "Qui Sommes-Nous ?",
+        "text1" : "Ce laboratoire s'est récemment distingué à l'international grâce à l’invention d’une soufflerie aérodynamique innovante à base de 'pixels' de vent, utile en particulier pour le test, le développement et la certification de drones. Cette soufflerie est également opérationnelle pour tout autre essai nécessitant des conditions non réalisables dans un soufflerie conventionnelle (météo, rafales, cisaillements, vents inclinés, etc.). L’invention a donné naissance à une startup d'HEPIA, WindShape.",
+        "titre2" : "Nos Services",
+        "text2" : "Nous proposons les services suivants",
+        "services" : [
+            { "id" : 0, "nom" : "Service 1", "desc" : "description service 1", "img" : "url/url/url"},
+            { "id" : 1, "nom" : "Service 2", "desc" : "description service 2", "img" : "url/url/url"},
+            { "id" : 2, "nom" : "Service 3", "desc" : "description service 3", "img" : "url/url/url"}
+        ]
+    },
+    {
+        "id" : 1,
+        "nom" : "C2N",
+        "nom2": "Centre de Nanosciences et de Nanotechnologies",
+        "localisation": "Paris-Saclay",
+        "img" : "https://www.edding.com/fileadmin/_processed_/4/4/csm_A010-two-men-looking-through-a-microscope_a3cdcb53bc.jpg",
+        "description" : "Le Centre de Nanosciences et de Nanotechnologies - C2N (CNRS/Université Paris-Saclay), a été créé le 1er juin 2016 du regroupement de deux laboratoires franciliens leaders dans leur domaine : le Laboratoire de photonique et de nanostructures (LPN) et l'Institut d'électronique fondamentale (IEF). En 2018, les équipes se sont installées dans un nouveau bâtiment au cœur du Campus Paris-Saclay.",
+        "plateformes" : {
+            "0" : 4
+        },
+        "titre1" : "Le Centre de Nanosciences en detail",
+        "text1" : "Le Centre de Nanosciences et de Nanotechnologies - C2N (CNRS/Université Paris-Saclay), a été créé le 1er juin 2016 du regroupement de deux laboratoires franciliens leaders dans leur domaine : le Laboratoire de photonique et de nanostructures (LPN) et l'Institut d'électronique fondamentale (IEF). En 2018, les équipes se sont installées dans un nouveau bâtiment au cœur du Campus Paris-Saclay.",
+        "titre2" : "Nos Services ?",
+        "text2" : "Nous vous offrons les services suivants",
+        "services" : [
+            { "id" : 0, "nom" : "Service 1", "desc" : "description service 1", "img" : "url/url/url"},
+            { "id" : 1, "nom" : "Service 2", "desc" : "description service 2", "img" : "url/url/url"},
+            { "id" : 2, "nom" : "Service 3", "desc" : "description service 3", "img" : "url/url/url"}
+        ]
+    }
+]

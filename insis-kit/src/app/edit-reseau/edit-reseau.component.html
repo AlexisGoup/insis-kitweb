@@ -1,0 +1,93 @@
+<section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <div style="margin-bottom: 50px;">
+        <h2>Editer le site web du reseau : {{ reseau?.nom }}</h2>
+    </div>
+
+  
+    
+    <form style="margin-left: 5%;" action="">
+
+        <!--  -->
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Profil</h3>
+        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                <p><strong>URL de l'image 1 :</strong></p>
+                <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ reseau?.img }}" style="width: 350px; margin-bottom: 30px;">
+            
+                <p><strong>Titre 1 :</strong></p>
+                <input ngModel name ='password' type="text" class="form-control" id="InputPassword" value="{{ reseau?.titre1 }}" style="width: 350px; margin-bottom: 30px;">
+
+                <p><strong>Texte 1 :</strong></p>
+                <textarea ngModel name ='text1' class="form-control" id='text1' value="{{ reseau?.text1 }}" style="width: 350px; margin-bottom: 30px;"></textarea>
+
+                <p><strong>Plateformes :</strong></p>
+                <ul style="list-style: none;">
+                    <li>
+                        <div *ngFor="let pf of plateformes" class="d-flex justify-content-between" style="background-color: white; padding: 5px; border-radius: 4px; margin-bottom: 10px;">
+                            <p style="margin-bottom: 5px;">{{ pf?.nom }}</p>
+                            <div>
+                                <i (click)="deleteModal(pf)" class="fa fa-trash" aria-hidden="true" style="cursor: pointer; margin-left: 10px;  margin-top: 5px; color: red;">  Retirer</i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between" style="background-color: white; padding: 5px; border-radius: 4px; margin-bottom: 10px; cursor: pointer;">
+                            <p style="margin-bottom: 5px;">Ajouter une plateforme</p>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style=" margin-left: 10px;  margin-top: 5px;"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="../../assets/img/Edit_Profil.png" alt="Edit_Profil_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">
+        </div>
+
+        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
+            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
+        </div>
+
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Services</h3>
+        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                <p><strong>Titre 2 :</strong></p>
+                <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ reseau?.titre2 }}" style="width: 350px; margin-bottom: 30px;">
+            
+                <p><strong>Texte 2 :</strong></p>
+                <textarea ngModel name ='text2' class="form-control" id='text2' value="{{ reseau?.text2 }}" style="width: 350px; margin-bottom: 30px;"></textarea>
+
+                <p><strong>Ajouter un service :</strong></p>
+                <input ngModel name ='addService' type="text" class="form-control" id="InputAddService" style="width: 350px; margin-bottom: 5px;">
+                <a type="button" class="btn btn-secondary" style="margin-bottom: 30px; margin-left: 200px;"> Ajouter un service</a>
+
+                <p><strong>Gerer les Services :</strong></p>
+                <ul style="list-style: none;">
+                    <li>
+                        <div *ngFor="let service of reseau?.services" class="d-flex justify-content-between" style="background-color: white; padding: 5px; border-radius: 4px; margin-bottom: 10px;">
+                            <p style="margin-bottom: 5px;">{{ service?.nom }}</p>
+                            <div>
+                                <i (click)="editService(service)" class="fa fa-pencil" aria-hidden="true" style="cursor: pointer; margin-left: 10px;  margin-top: 5px;">  Editer</i>
+                                <i (click)="deleteModal(service)" class="fa fa-trash" aria-hidden="true" style="cursor: pointer; margin-left: 10px;  margin-top: 5px; color: red;">  Retirer</i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between" style="background-color: white; padding: 5px; border-radius: 4px; margin-bottom: 10px; cursor: pointer;">
+                            <p style="margin-bottom: 5px;">Ajouter un service</p>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style=" margin-left: 10px;  margin-top: 5px;"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <img src="../../assets/img/Edit_Services.png" alt="Edit_Services_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">
+        </div>
+
+        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
+            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
+        </div>
+    </form>
+    
+</section>
