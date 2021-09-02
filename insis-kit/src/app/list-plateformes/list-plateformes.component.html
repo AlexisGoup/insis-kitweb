@@ -14,7 +14,7 @@
             <div>
                 <img src="{{ plateforme.img }}" alt="image descriptive du reseau" style="width: 250px;">
             </div>
-            <a type="button" class="btn btn-secondary" [routerLink]="['/formPlateforme', reseau.nom, plateforme.id]" style="margin-top: 15px;">Editer le contenu du site</a>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-plateforme', plateforme.id]" style="margin-top: 15px;">Editer le contenu du site</a>
             <a type="button" class="btn btn-secondary" [routerLink]="['/equipements', reseau.nom, plateforme.id]" style="margin-top: 15px;">Editer les EQT de la plateforme</a>
         </div>
 
@@ -35,7 +35,7 @@
             <div>
                 <img src="{{ equipement.img }}" alt="image descriptive du reseau" style="width: 250px; height: 250px;">
             </div>
-            <a type="button" class="btn btn-secondary" [routerLink]="['/formEquipement', reseau.id]" style="margin-top: 15px;">Editer l'equipement</a>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-equipement', equipement.id]" style="margin-top: 15px;">Editer l'equipement</a>
         </div>
 
         <div class="d-flex flex-column"

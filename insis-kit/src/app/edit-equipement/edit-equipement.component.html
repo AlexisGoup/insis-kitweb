@@ -1,0 +1,47 @@
+<section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <div style="margin-bottom: 50px;">
+        <h2>Editer la fiche de l'equipement : {{ equipement?.nom }}</h2>
+    </div>
+
+  
+    
+    <form style="margin-left: 5%;" action="">
+
+        <!--  -->
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Profil</h3>
+        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                <p><strong>URL de l'image descriptive :</strong></p>
+                <input ngModel name ='url' type="email" class="form-control" id="url" value="{{ equipement?.img }}" style="width: 350px; margin-bottom: 30px;">
+            
+                <p><strong>Nom :</strong></p>
+                <input ngModel name ='nom' type="text" class="form-control" id="nom" value="{{ equipement?.nom }}" style="width: 350px; margin-bottom: 30px;">
+
+                <p><strong>Nom 2 :</strong></p>
+                <textarea ngModel name ='nom2' class="form-control" id='nom2' value="{{ equipement?.nom2 }}" style="width: 350px; margin-bottom: 30px;"></textarea>
+            </div>
+
+            <img src="../../assets/img/Edit_Profil.png" alt="Edit_Profil_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">
+        </div>
+
+        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
+            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
+        </div>
+
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Services</h3>
+        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                
+            </div>
+
+            <img src="../../assets/img/Edit_Services.png" alt="Edit_Services_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">
+        </div>
+
+        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
+            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
+        </div>
+    </form>
+    
+</section>

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CompteComponent } from './compte/compte.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ContactComponent } from './contact/contact.component';
+import { EditEquipementComponent } from './edit-equipement/edit-equipement.component';
+import { EditPlateformeComponent } from './edit-plateforme/edit-plateforme.component';
 import { EditReseauComponent } from './edit-reseau/edit-reseau.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AuthenficationGuard } from './guards/authenfication.guard';
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: "equipements/:nom/:id", component: ListEquipementsComponent, canActivate: [AuthenficationGuard]},
   {path: "compte", component: CompteComponent, canActivate: [AuthenficationGuard]},
   {path: "edit-reseau/:id", component : EditReseauComponent, canActivate: [AuthenficationGuard, AdminGuard]},
+  {path: "edit-plateforme/:id", component: EditPlateformeComponent, canActivate: [AuthenficationGuard, AdminGuard]},
+  {path: "edit-equipement/:id", component: EditEquipementComponent, canActivate: [AuthenficationGuard]},
   {path: "contact", component: ContactComponent},
   {path: "mentions", component: MentionsComponent},
   {path: "**", component: ConnexionComponent}

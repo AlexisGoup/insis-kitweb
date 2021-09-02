@@ -18,6 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalModule } from './modal/modal.module';
 import { ContactComponent } from './contact/contact.component';
 import { MentionsComponent } from './mentions/mentions.component';
+import { EditPlateformeComponent } from './edit-plateforme/edit-plateforme.component';
+import { EditEquipementComponent } from './edit-equipement/edit-equipement.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MentionsComponent } from './mentions/mentions.component';
     CompteComponent,
     EditReseauComponent,
     ContactComponent,
-    MentionsComponent
+    MentionsComponent,
+    EditPlateformeComponent,
+    EditEquipementComponent
   ],
   imports: [
     BrowserModule,
