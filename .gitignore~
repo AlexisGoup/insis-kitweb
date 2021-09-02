@@ -1,12 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-.ca/
-.insis-back/
-.insis-kit/
-.insis-nat/
-.insis-pf/
-.insis-reso/
 
-#output
+# compiled output
 /dist
 /tmp
 /out-tsc
