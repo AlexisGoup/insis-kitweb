@@ -40,4 +40,15 @@ export class EquipementService {
     
     return find
   }
+
+  async getById(id : Number) {
+    let find : Equipement = {} as Equipement
+    let allEquipements : Equipement[] = await this.getAll().toPromise()
+
+    allEquipements.forEach(element => {
+      if (element.id === id) find = element
+    });
+    
+    return find
+  }
 }

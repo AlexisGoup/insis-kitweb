@@ -1,47 +1,106 @@
 <section class="container" style="margin-left: 18%; margin-top: 3%;">
     <div style="margin-bottom: 50px;">
-        <h2>Editer la fiche de l'equipement : {{ equipement?.nom }}</h2>
+        <h2>Editer la fiche de l'equipement : </h2>
     </div>
-
-  
-    
-    <form style="margin-left: 5%;" action="">
-
-        <!--  -->
-        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Profil</h3>
-        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
-            <div>
-                <p><strong>URL de l'image descriptive :</strong></p>
-                <input ngModel name ='url' type="email" class="form-control" id="url" value="{{ equipement?.img }}" style="width: 350px; margin-bottom: 30px;">
-            
-                <p><strong>Nom :</strong></p>
-                <input ngModel name ='nom' type="text" class="form-control" id="nom" value="{{ equipement?.nom }}" style="width: 350px; margin-bottom: 30px;">
-
-                <p><strong>Nom 2 :</strong></p>
-                <textarea ngModel name ='nom2' class="form-control" id='nom2' value="{{ equipement?.nom2 }}" style="width: 350px; margin-bottom: 30px;"></textarea>
-            </div>
-
-            <img src="../../assets/img/Edit_Profil.png" alt="Edit_Profil_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">
-        </div>
-
-        <div class="d-flex justify-content-end" style="margin-top: 10px;">
-            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
-            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
-        </div>
-
-        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Services</h3>
-        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
-            <div>
-                
-            </div>
-
-            <img src="../../assets/img/Edit_Services.png" alt="Edit_Services_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">
-        </div>
-
-        <div class="d-flex justify-content-end" style="margin-top: 10px;">
-            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
-            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
-        </div>
-    </form>
-    
 </section>
+
+<form style="margin-left: 5%;" action="">
+
+    <section class="container" style="margin-left: 18%; margin-top: 3%;">
+        <div>
+            <h2>Fiche Equipement</h2>
+            <div>
+                <div style="margin: 30px; margin-left: 0px;">
+                    <h3>{{ equipement?.nom }}</h3> 
+                </div>
+
+                <div class="d-flex justify-content-between" style=""> 
+                    <div class="d-flex flex-column" style="background-color: lightgray; padding: 20px; width: 680px;">
+                        <div style="padding: 20px; margin-bottom: 30px; overflow: hidden;">
+                            <table class="table" style="width: 680px;">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">URL image descriptive</th>
+                                        <td>
+                                            <input ngModel name ='img' type="text" class="form-control" id="img" value="{{ equipement?.img }}" style="width: 350px;">
+                                        </td>
+                                        </tr>
+                                    <tr>
+                                        <th scope="row">Marque</th>
+                                        <td>
+                                            <input ngModel name ='marque' type="text" class="form-control" id="marque" value="{{ equipement?.marque }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Modele</th>
+                                        <td>
+                                            <input ngModel name ='modele' type="text" class="form-control" id="modele" value="{{ equipement?.modele }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Localisation</th>
+                                        <td>
+                                            <input ngModel name ='localisation' type="text" class="form-control" id="localisation" value="{{ equipement?.localisation }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Contact</th>
+                                        <td>
+                                            <input ngModel name ='contact' type="text" class="form-control" id="contact" value="{{ equipement?.contact }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>Caracteristiques Specifiques</h4> 
+
+                        <div style="padding: 20px; margin-bottom: 30px; overflow: hidden;">
+                            <table class="table" style="width: 680px;">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Genre</th>
+                                        <td>
+                                            <input ngModel name ='champ0' type="text" class="form-control" id="champ0" value="{{ equipement?.champ0 }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Resolution</th>
+                                        <td>
+                                            <input ngModel name ='champ1' type="text" class="form-control" id="champ1" value="{{ equipement?.champ1 }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Longueur d'ondes</th>
+                                        <td>
+                                            <input ngModel name ='champ2' type="text" class="form-control" id="champ2" value="{{ equipement?.champ2 }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        
+                    </div>
+
+                    <div>
+                        <img src="../../assets/img/microscope_fiche.jpg" alt="" style="width: 600px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container" style="margin-left: 18%; margin-top: 3%;">
+        <h4>Description de l'equipement</h4>
+
+        <textarea ngModel name ='description' type="text" class="form-control" id="description" value="{{ equipement?.description }}" style="margin-top: 3%; height: 150px;">
+        </textarea>
+    </section>
+
+    <div class="d-flex justify-content-start" style="margin-top: 60px; margin-left: 19%;">
+        <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
+        <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
+    </div>
+</form>

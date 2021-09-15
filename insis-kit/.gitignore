@@ -13,6 +13,9 @@
 # profiling files
 chrome-profiler-events*.json
 
+# J'AJOUTE LE PACKAGE JSON POUR POUVOIR CHANGER LA CONFIG START SUR MA MACHINE 
+package.json
+
 # IDEs and editors
 /.idea
 .project
