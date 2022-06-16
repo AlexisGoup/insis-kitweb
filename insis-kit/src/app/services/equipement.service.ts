@@ -1,54 +1,39 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Equipement } from '../model/equipement';
 import { Plateforme } from '../model/plateforme';
 import { Reseau } from '../model/reseau';
+import { Equipement } from '../model/equipement';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EquipementService {
 
-  url : String = 'data/'
+  url : string = 'http://localhost:3000'
 
   constructor(private http : HttpClient) { }
 
-  getAll() : Observable<Equipement[]> {
-    console.log(this.http.get<Equipement[]>(this.url + '/equipements.json'));
-     return this.http.get<Equipement[]>(this.url + '/equipements.json')
+  getAll() {
+    return this.http.get<Equipement[]>(this.url + '/equipements/');
   }
 
-  async getByPlatform(plateforme : Plateforme) {
+  async getByPlatform(id_plateforme : number) {
     let find : Equipement[] = []
-    let plateformes : Equipement[] = await this.getAll().toPromise()
+    let all_equipements  = await this.getAll().toPromise()
 
-    plateformes.forEach(element => {
-      if (element.plateforme === plateforme.id) find.push(element)
+    all_equipements.forEach(element => {
+      if (element.id_plateforme === id_plateforme) find.push(element)
     });
     
     return find
   }
 
-  async getByReseau(reseau : Reseau) {
-    let find : Equipement[] = []
-    let plateformes : Equipement[] = await this.getAll().toPromise()
-
-    plateformes.forEach(element => {
-      if (element.reseau === reseau.id) find.push(element)
-    });
-    
-    return find
+  getByReseau(reseau : Reseau) {
+    return this.http.get<Equipement[]>(this.url + '/equipements_du_reseau/' + reseau.id_reseau);
   }
 
-  async getById(id : Number) {
-    let find : Equipement = {} as Equipement
-    let allEquipements : Equipement[] = await this.getAll().toPromise()
-
-    allEquipements.forEach(element => {
-      if (element.id === id) find = element
-    });
-    
-    return find
+  getById(id : Number) {
+    return this.http.get<Equipement>(this.url + '/equipements/' + id);
   }
 }

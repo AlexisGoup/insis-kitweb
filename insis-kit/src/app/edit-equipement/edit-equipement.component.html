@@ -1,4 +1,4 @@
-<section class="container" style="margin-left: 18%; margin-top: 3%;">
+<section class="container" style="margin-left: 12%; margin-top: 3%;">
     <div style="margin-bottom: 50px;">
         <h2>Editer la fiche de l'equipement : </h2>
     </div>
@@ -6,47 +6,59 @@
 
 <form style="margin-left: 5%;" action="">
 
-    <section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <section class="container" style="margin-left: 12%; margin-top: 3%;">
         <div>
             <h2>Fiche Equipement</h2>
             <div>
                 <div style="margin: 30px; margin-left: 0px;">
-                    <h3>{{ equipement?.nom }}</h3> 
+                    <h3>{{ equipement[0]?.nom_1_equipement }}</h3> 
                 </div>
 
-                <div class="d-flex justify-content-between" style=""> 
+                <div class="d-flex justify-content-between" > 
                     <div class="d-flex flex-column" style="background-color: lightgray; padding: 20px; width: 680px;">
                         <div style="padding: 20px; margin-bottom: 30px; overflow: hidden;">
                             <table class="table" style="width: 680px;">
                                 <tbody>
                                     <tr>
-                                        <th scope="row">URL image descriptive</th>
+                                        <th scope="row">Nom 1</th>
                                         <td>
-                                            <input ngModel name ='img' type="text" class="form-control" id="img" value="{{ equipement?.img }}" style="width: 350px;">
+                                            <input  name ='nom_1' type="text" class="form-control" id="marque" value="{{ equipement[0].nom_1_equipement }}" style="width: 350px;">
                                         </td>
-                                        </tr>
+                                    </tr>
                                     <tr>
-                                        <th scope="row">Marque</th>
+                                        <th scope="row">Nom 2</th>
                                         <td>
-                                            <input ngModel name ='marque' type="text" class="form-control" id="marque" value="{{ equipement?.marque }}" style="width: 350px;">
+                                            <input  name ='marque' type="text" class="form-control" id="marque" value="{{ equipement[0].nom_2_equipement }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Image de l'équipement</th>
+                                        <td>
+                                            <input  name ='marque' type="text" class="form-control" id="marque" value="{{ equipement[0].url_img_equipement }}" style="width: 350px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Constructeur</th>
+                                        <td>
+                                            <input  name ='modele' type="text" class="form-control" id="modele" value="{{ equipement[0]?.constructeur_equipement }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Modele</th>
                                         <td>
-                                            <input ngModel name ='modele' type="text" class="form-control" id="modele" value="{{ equipement?.modele }}" style="width: 350px;">
+                                            <input  name ='modele' type="text" class="form-control" id="modele" value="{{ equipement[0]?.modele_equipement }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Localisation</th>
+                                        <th scope="row">Lieu de stockage</th>
                                         <td>
-                                            <input ngModel name ='localisation' type="text" class="form-control" id="localisation" value="{{ equipement?.localisation }}" style="width: 350px;">
+                                            <input  name ='localisation' type="text" class="form-control" id="localisation" value="{{ equipement[0]?.lieu_stockage_equipement }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Contact</th>
+                                        <th scope="row">Personne(s) contact</th>
                                         <td>
-                                            <input ngModel name ='contact' type="text" class="form-control" id="contact" value="{{ equipement?.contact }}" style="width: 350px;">
+                                            <input  name ='contact' type="text" class="form-control" id="contact" value="{{ equipement[0]?.id_user }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                 </tbody>
@@ -61,19 +73,19 @@
                                     <tr>
                                         <th scope="row">Genre</th>
                                         <td>
-                                            <input ngModel name ='champ0' type="text" class="form-control" id="champ0" value="{{ equipement?.champ0 }}" style="width: 350px;">
+                                            <input name ='champ0' type="text" class="form-control" id="champ0" value="{{ equipement[0]?.spe_tech_1 }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Resolution</th>
                                         <td>
-                                            <input ngModel name ='champ1' type="text" class="form-control" id="champ1" value="{{ equipement?.champ1 }}" style="width: 350px;">
+                                            <input name ='champ1' type="text" class="form-control" id="champ1" value="{{ equipement[0]?.spe_tech_2 }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Longueur d'ondes</th>
                                         <td>
-                                            <input ngModel name ='champ2' type="text" class="form-control" id="champ2" value="{{ equipement?.champ2 }}" style="width: 350px;">
+                                            <input name ='champ2' type="text" class="form-control" id="champ2" value="{{ equipement[0]?.spe_tech_3 }}" style="width: 350px;">
                                         </td>
                                     </tr>
                                 </tbody>
@@ -84,7 +96,7 @@
                     </div>
 
                     <div>
-                        <img src="../../assets/img/microscope_fiche.jpg" alt="" style="width: 600px;">
+                        <img src="{{ equipement[0]?.url_img_equipement }}" alt="" style="width: 600px;">
                     </div>
                 </div>
             </div>
@@ -92,10 +104,10 @@
         </div>
     </section>
 
-    <section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <section class="container" style="margin-left: 12%; margin-top: 3%; background-color: lightgray; padding: 10px;">
         <h4>Description de l'equipement</h4>
 
-        <textarea ngModel name ='description' type="text" class="form-control" id="description" value="{{ equipement?.description }}" style="margin-top: 3%; height: 150px;">
+        <textarea  name ='description' type="text" class="form-control" id="description" value="{{ equipement[0]?.description_equipement }}" style="margin-top: 3%; height: 150px;">
         </textarea>
     </section>
 

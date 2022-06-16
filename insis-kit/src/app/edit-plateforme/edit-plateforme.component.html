@@ -1,26 +1,37 @@
-<section class="container" style="margin-left: 18%; margin-top: 3%;">
+<section class="container" style="margin-left: 12%; margin-top: 3%;">
     <div style="margin-bottom: 50px;">
-        <h2>Editer le site web de la plateforme : {{ plateforme?.nom }}</h2>
+        <h2>Editer le Site Web de la Plateforme {{ plateforme?.nom_1_plateforme }}</h2>
     </div>
 
    
     
     <form style="margin-left: 5%;" action="">
 
-        <!--  -->
-        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section a modifier</h3>
-        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
-            <h1 style="color: red;">TODO : CETTE PARTIE RESTE A DEFINIR </h1>
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Données générales de la Plateforme</h3>
+        <div class="d-flex justify-content-between" style="padding: 15px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                <p><strong>Nom général de la Plateforme</strong></p>
+                <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ plateforme?.nom_1_plateforme }}" style="width: 350px; margin-bottom: 30px;">
+            
+                <p><strong>Nom secondaire</strong></p>
+                <input ngModel name ='password' type="text" class="form-control" id="InputPassword" value="{{ plateforme?.nom_2_plateforme }}" style="width: 350px; margin-bottom: 30px;">
+            </div>
         </div>
 
-        <div class="d-flex justify-content-end" style="margin-top: 10px;">
-            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
-            <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
-        </div>
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Page Profil - Acceuil</h3>
+        <div class="d-flex justify-content-between" style="padding: 15px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                <p><strong>Titre 1</strong></p>
+                <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ plateforme?.titre_page_acceuil_plateforme }}" style="width: 350px; margin-bottom: 30px;">
+            
+                <p><strong>Texte 1</strong></p>
+                <textarea ngModel name ='password' type="text" class="form-control" id="InputPassword" value="{{ plateforme?.desc_page_acceuil_plateforme }}" style="width: 500px; height: 200px; margin-bottom: 30px;"></textarea>
 
-        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section a modifier</h3>
-        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
-            <h1 style="color: red;">TODO : CETTE PARTIE RESTE A DEFINIR</h1>
+                <p><strong>Image 1</strong></p>
+                <input ngModel name ='text1' class="form-control" id='text1' value="{{ plateforme?.url_img_acceuil_plateforme }}" style="width: 350px; margin-bottom: 30px;">
+            </div>
+
+            <!--<img src="" alt="Edit_Profil_Description" style="margin-left: 50px; width: 50%; height: 50%; border-radius: 3px;">-->
         </div>
 
         <div class="d-flex justify-content-end" style="margin-top: 10px;">
@@ -28,5 +39,4 @@
             <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
         </div>
     </form>
-    
 </section>

@@ -20,12 +20,13 @@ export class EditEquipementComponent implements OnInit {
 
   async loadData() {
     let id = Number(this.route.snapshot.paramMap.get('id'));
-    this.equipement = await this.eqtService.getById(id);
-    console.log(this.equipement);
+    this.equipement = await this.eqtService.getById(id).toPromise();
+    console.log(this.equipement[0].nom_1_equipement);
   }
 
   saved() {
-    this.toastr.success('Succes', 'Sauvegarde avec succes')
+    //this.toastr.success('Succes', 'Sauvegarde avec succes')
+    this.toastr.error('Données non enregistrées')
   }
 
   return() {

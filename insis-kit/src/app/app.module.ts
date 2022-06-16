@@ -20,6 +20,11 @@ import { ContactComponent } from './contact/contact.component';
 import { MentionsComponent } from './mentions/mentions.component';
 import { EditPlateformeComponent } from './edit-plateforme/edit-plateforme.component';
 import { EditEquipementComponent } from './edit-equipement/edit-equipement.component';
+import { NewEquipementComponent } from './new-equipement/new-equipement.component';
+import { FrontHomeComponent } from './front-home/front-home.component';
+import { FrontReseauComponent } from './front-reseau/front-reseau.component';
+import { FrontPlateformeComponent } from './front-plateforme/front-plateforme.component';
+import { FrontEquipementComponent } from './front-equipement/front-equipement.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { EditEquipementComponent } from './edit-equipement/edit-equipement.compo
     ContactComponent,
     MentionsComponent,
     EditPlateformeComponent,
-    EditEquipementComponent
+    EditEquipementComponent,
+    NewEquipementComponent,
+    FrontHomeComponent,
+    FrontReseauComponent,
+    FrontPlateformeComponent,
+    FrontEquipementComponent
   ],
   imports: [
     BrowserModule,

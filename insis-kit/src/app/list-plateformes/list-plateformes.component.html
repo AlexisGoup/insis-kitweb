@@ -3,19 +3,19 @@
         <h2>Plateformes</h2>
     </div>
 
-    <p style="text-transform : uppercase;"> > {{ reseau?.nom }}<p>
+    <p style="text-transform : uppercase;"> > {{ reseau?.nom_1_reseau }}<p>
     <h3>Liste des plateformes rattachees au reseau</h3>
     <div class="d-flex" style="flex-wrap: wrap;">  
         <div *ngFor="let plateforme of plateformes" 
             class="d-flex flex-column" 
             style="background-color: lightgray; width: 300px; margin: 30px; padding: 15px;">
 
-            <p>{{ plateforme.nom }}</p>
+            <p>{{ plateforme?.nom_1_plateforme }}</p>
             <div>
-                <img src="{{ plateforme.img }}" alt="image descriptive du reseau" style="width: 250px;">
+                <img src="{{ plateforme.url_img_acceuil_plateforme }}" alt="image descriptive de la plateforme" style="width: 250px;">
             </div>
-            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-plateforme', plateforme.id]" style="margin-top: 15px;">Editer le contenu du site</a>
-            <a type="button" class="btn btn-secondary" [routerLink]="['/equipements', reseau.nom, plateforme.id]" style="margin-top: 15px;">Editer les EQT de la plateforme</a>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-plateforme', plateforme?.id_plateforme]" style="margin-top: 15px;">Editer le contenu du site</a>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/equipements', reseau?.id_reseau, plateforme?.id_plateforme]" style="margin-top: 15px;">Editer les EQT de la plateforme</a>
         </div>
 
         <div class="d-flex flex-column"
@@ -25,17 +25,18 @@
         </div>
     </div>
 
-    <h3 style="margin-top: 4%;">Tous les equipements du reseau {{ reseau?.nom }}</h3>
+    <!--
+    <h3 style="margin-top: 4%;">Tous les equipements du reseau {{ reseau?.nom_1_reseau }}</h3>
     <div class="d-flex" style="flex-wrap: wrap;">  
         <div *ngFor="let equipement of equipements" 
             class="d-flex flex-column" 
             style="background-color: lightgray; width: 300px; margin: 30px; padding: 15px;">
 
-            <p>{{ equipement.nom }}</p>
+            <p>{{ equipement.nom_1_equipement }}</p>
             <div>
-                <img src="{{ equipement.img }}" alt="image descriptive du reseau" style="width: 250px; height: 250px;">
+                <img src="{{ equipement.url_img_equipement }}" alt="image descriptive du reseau" style="width: 250px; height: 250px;">
             </div>
-            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-equipement', equipement.id]" style="margin-top: 15px;">Editer l'equipement</a>
+            <a type="button" class="btn btn-secondary" [routerLink]="['/edit-equipement', equipement.id_equipement]" style="margin-top: 15px;">Editer l'equipement</a>
         </div>
 
         <div class="d-flex flex-column"
@@ -44,4 +45,5 @@
             <i  class="fa fa-plus fa-5x" aria-hidden="true" style="font-size: 150px; margin-left: 70px; margin-top: 40px; cursor: pointer;"></i>
         </div>
     </div>
+    -->
 </section>

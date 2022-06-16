@@ -1,0 +1,46 @@
+<div class="container" style="margin-top: 2%;">
+    <div class="d-flex justify-content-center" style="margin-right: 100px;">
+        <h1 style="font-size: 80px;">{{ reseau.nom_1_reseau }}</h1>
+    </div>
+</div>
+
+<!--HEADER-->
+<app-front-header></app-front-header>
+
+<section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <div>
+        <h2>Profil</h2>
+        <div class="d-flex justify-content-between" style="margin-top: 40px;">
+            <div style="width: 100%;">
+                <img src="{{ reseau.url_img_acceuil_reseau }}" alt=""  style="width: 600px;">
+            </div>
+            <div style="padding-left: 30px; text-align: justify;">
+                <h3 style="margin-bottom: 20px;">{{ reseau.titre_page_acceuil_reseau }}</h3>
+                <p>
+                    {{ reseau.desc_page_acceuil_reseau }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 7%;">
+        <h3>Liste des plateformes du réseau :</h3>
+        <div class="d-flex " >  
+            <div *ngFor="let plateforme of plateformes" 
+                class="d-flex flex-column" 
+                style="background-color: lightgray; width: 300px; margin: 30px; padding: 15px;">
+    
+                <p>{{ plateforme.nom_1_plateforme }}</p>
+                <div>
+                    <img src="{{ plateforme.url_img_acceuil_plateforme }}" alt="image descriptive de la plateforme" style="width: 250px;">
+                </div>
+                <div style="margin-top: 20px; text-justify: auto;">
+                    <p>{{ plateforme.desc_generale_nat_plateforme }}</p>
+                </div>
+                <a type="button" class="btn btn-secondary" href="/plateforme/{{ plateforme.id_plateforme }}" style="margin-top: 15px;">Voir la plateforme</a>
+            </div>
+        </div>
+    </div>
+   
+
+</section>

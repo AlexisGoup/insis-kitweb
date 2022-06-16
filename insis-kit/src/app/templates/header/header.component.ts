@@ -16,6 +16,10 @@ export class HeaderComponent implements OnInit {
     this.user = localStorage.getItem('user')
   }
 
+  toHome() {
+    this.router.navigate(["reseaux"]);
+  }
+
   deconnecter() {
     localStorage.clear()
     window.location.reload()

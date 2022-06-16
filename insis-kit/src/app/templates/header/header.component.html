@@ -3,16 +3,20 @@
         <div style="margin-right: 100px;">
             <h1>Kit Web INSIS</h1>
         </div>
-        <div *ngIf="this.user != null" class="d-flex justify-content-around" style="margin-top: 10px; background-color: lightgray; padding: 10px; border-radius: 3px;">
-            <div class="flex-column">
+        <div class="d-flex justify-content-around" style="margin-top: 10px; background-color: lightgray; padding: 10px; border-radius: 3px;">
+            <div *ngIf="this.user != null" class="flex-column">
                 <p style="margin-right: 20px;">Bonjour {{ user }}</p>
-                <a style="cursor: pointer; font-size: smaller; color: red;" (click)="deconnecter()">Se deconnecter</a>
+                <a style="cursor: pointer; font-size: smaller; color: slategray; font-weight: bold; margin-right: 20px" (click)="deconnecter()">Se deconnecter</a>
+            </div>
+            <div *ngIf="this.user == null" class="flex-column">
+                <p style="margin-right: 20px;"></p>
+                <a href="/login" style="cursor: pointer; font-size: smaller; color: slategray; font-weight: bold; margin-right: 20px" >Se connecter</a>
             </div>
             <i class="fa fa-user fa-4x" aria-hidden="true"></i>
         </div>
     </div>
-    <div class="d-flex" style="background-color: lightgray; margin: 20px; border-radius: 3px; padding: 3px;">
-        <img src="../../../assets/img/logo.svg" alt="Accueil" style="height: 90px;">
+    <div class="d-flex" style="background-color: lightslategray; margin: 20px; border-radius: 3px; padding: 20px;">
+        <img src="../../../assets/img/logo.svg" alt="Accueil" style="height: 90px; cursor: pointer;" (click)="toHome()">
         <nav *ngIf="user != undefined">
             <ul style="display: flex; list-style: none; font-size: larger; font-weight: 400;  margin-top: 7%; text-transform: uppercase;">
                 <li>

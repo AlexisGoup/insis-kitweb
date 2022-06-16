@@ -44,8 +44,10 @@ export class EditPlateformeComponent implements OnInit {
     modale.componentInstance.element = element
   }
 
-  saved() {
+  async saved() {
     this.toastr.success('Succes', 'Sauvegarde avec succes')
+    let isSaved = await this.pfService.updateById(this.plateforme).toPromise()
+    isSaved ? this.toastr.success('Succes', 'Sauvegarde avec succes') : this.toastr.error('Données non enregistrées')
   }
 
   return() {

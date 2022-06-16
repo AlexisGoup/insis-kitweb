@@ -49,4 +49,8 @@ export class ConnexionComponent implements OnInit {
     else return this.fail()
   }
 
+  toHome() {
+    this.router.navigate(["reseaux"]);
+  }
+
 }

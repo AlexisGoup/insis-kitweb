@@ -1,11 +1,7 @@
 {
-    "http://162.38.134.135/db" : {
-        "target" : "http://localhost/3000/users",
+    " http://localhost:4200/db/*" : {
+        "target" : "http://localhost:3000/equipement",
         "secure" : false,
-        "logLevel" : "debug",
-        "changeOrigin" : true,
-        "pathRewrite" : {
-            "^/db" : ""
-        }
+        "logLevel" : "debug"
     }
 }

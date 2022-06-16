@@ -24,10 +24,16 @@ export class EditReseauComponent implements OnInit {
     this.loadData()
   }
 
+  onSubmit(data : any) {
+    console.log(data);
+  }
+
   async loadData() {
     let id = Number(this.route.snapshot.paramMap.get('id'))
     this.reseau = await this.reseauService.getById(id)
     this.plateformes = await this.pfServices.getByReseau(this.reseau)
+    console.log(this.reseau);
+    
   }
 
   editService(service : any) {
@@ -46,7 +52,8 @@ export class EditReseauComponent implements OnInit {
   }
 
   saved() {
-    this.toastr.success('Succes', 'Sauvegarde avec succes')
+    //this.toastr.success('Succes', 'Sauvegarde avec succes')
+    this.toastr.error('Données non enregistrées')
   }
 
   return() {

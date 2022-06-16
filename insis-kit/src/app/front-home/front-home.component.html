@@ -1,0 +1,26 @@
+<!--HEADER-->
+<app-front-header></app-front-header>
+
+<section class="container" style="margin-left: 18%; margin-top: 3%;">
+    <div style="margin-bottom: 50px;">
+        <h2>Nos Réseaux de plateformes techniques</h2>
+    </div>
+
+    <div class="d-flex">  
+        <div *ngFor="let reseau of reseaux" 
+            class="d-flex flex-column" 
+            style="background-color: lightgray; width: 300px; margin: 30px; padding: 15px;">
+
+            <p style="font-weight:bold">{{ reseau.nom_1_reseau }}</p>
+            <div>
+                <img src="{{ reseau.url_img_acceuil_reseau }}" alt="image descriptive du reseau" style="width: 250px;">
+            </div>
+            <div style="margin-top: 20px; text-justify: auto;">
+                <p>{{ reseau.desc_generale_nat_reseau }}</p>
+            </div>
+            <a type="button" class="btn btn-secondary" href="/reseau/{{ reseau.id_reseau }}" style="margin-top: 15px;">Voir le réseau</a>
+        </div>
+
+        
+    </div>
+</section>

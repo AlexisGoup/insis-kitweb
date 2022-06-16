@@ -1,24 +1,35 @@
-<section class="container" style="margin-left: 18%; margin-top: 3%;">
+<section class="container" style="margin-left: 12%; margin-top: 3%;">
     <div style="margin-bottom: 50px;">
-        <h2>Editer le site web du reseau : {{ reseau?.nom }}</h2>
+        <h2>Editer le Site Web du Réseau {{ reseau?.nom_1_reseau }}</h2>
     </div>
 
   
     
-    <form style="margin-left: 5%;" action="">
+    <form style="margin-left: 5%;" #infosReseau="ngForm">
+
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Données générales</h3>
+        <div class="d-flex justify-content-between" style="padding: 15px; background-color: lightgray; border-radius: 3px;">
+            <div>
+                <p><strong>Nom général du réseau</strong></p>
+                <input [(ngModel)]="reseau.nom_1_reseau" name ='nom reseau 1' type="email" class="form-control" id="InputEmail" value="{{ reseau?.nom_1_reseau }}" style="width: 350px; margin-bottom: 30px;">
+            
+                <p><strong>Nom secondaire</strong></p>
+                <input ngModel name ='nom reseau 2' type="text" class="form-control" id="InputPassword" value="{{ reseau?.nom_2_reseau }}" style="width: 350px; margin-bottom: 30px;">
+            </div>
+        </div>
 
         <!--  -->
-        <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Profil</h3>
-        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
+        <h3 style="margin-bottom: 50px; margin-top: 5%;">Page Profil - Acceuil</h3>
+        <div class="d-flex justify-content-between" style="padding: 15px; background-color: lightgray; border-radius: 3px;">
             <div>
-                <p><strong>URL de l'image 1 :</strong></p>
-                <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ reseau?.img }}" style="width: 350px; margin-bottom: 30px;">
+                <p><strong>Image 1</strong></p>
+                <input ngModel name ='img acceuil' type="email" class="form-control" id="InputEmail" value="{{ reseau?.url_img_acceuil_reseau }}" style="width: 350px; margin-bottom: 30px;">
             
                 <p><strong>Titre 1 :</strong></p>
-                <input ngModel name ='password' type="text" class="form-control" id="InputPassword" value="{{ reseau?.titre1 }}" style="width: 350px; margin-bottom: 30px;">
+                <input ngModel name ='titre page acceuil' type="text" class="form-control" id="InputPassword" value="{{ reseau?.titre_page_acceuil_reseau }}" style="width: 350px; margin-bottom: 30px;">
 
                 <p><strong>Texte 1 :</strong></p>
-                <textarea ngModel name ='text1' class="form-control" id='text1' value="{{ reseau?.text1 }}" style="width: 350px; margin-bottom: 30px;"></textarea>
+                <textarea ngModel name ='desc page acceuil' class="form-control" id='text1' value="{{ reseau?.desc_page_acceuil_reseau }}" style="width: 350px; margin-bottom: 30px;"></textarea>
 
                 <p><strong>Plateformes :</strong></p>
                 <ul style="list-style: none;">
@@ -43,12 +54,13 @@
         </div>
 
         <div class="d-flex justify-content-end" style="margin-top: 10px;">
-            <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
+            <a (click)='onSubmit(infosReseau.value)' type="button" class="btn btn-secondary" >Enregistrer</a>
             <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
         </div>
 
+        <!--
         <h3 style="margin-bottom: 50px; margin-top: 5%;">Section Services</h3>
-        <div class="d-flex justify-content-between" style="padding: 5px; background-color: lightgray; border-radius: 3px;">
+        <div class="d-flex justify-content-between" style="padding: 15px; background-color: lightgray; border-radius: 3px;">
             <div>
                 <p><strong>Titre 2 :</strong></p>
                 <input ngModel name ='email' type="email" class="form-control" id="InputEmail" value="{{ reseau?.titre2 }}" style="width: 350px; margin-bottom: 30px;">
@@ -88,6 +100,7 @@
             <a (click)='saved()' type="button" class="btn btn-secondary" >Enregistrer</a>
             <a (click)='return()' type="button" class="btn btn-secondary" style="margin-left: 10px;">Retour</a>
         </div>
+    -->
     </form>
     
 </section>
