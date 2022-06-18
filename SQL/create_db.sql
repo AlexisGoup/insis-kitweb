@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 17 juin 2022 à 09:00
+-- Généré le : sam. 18 juin 2022 à 13:14
 -- Version du serveur : 5.7.34
 -- Version de PHP : 7.4.21
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `insis_kitweb_database`
 --
+CREATE DATABASE IF NOT EXISTS `insis_kitweb_database` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `insis_kitweb_database`;
 
 -- --------------------------------------------------------
 
