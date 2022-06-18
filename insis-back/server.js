@@ -15,9 +15,9 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'Umhplinsis15',
     database: 'insis_kitweb_database',
-    port : 8889
+    port : 3306
 });
 
 // check database connection 
